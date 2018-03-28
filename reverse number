@@ -1,4 +1,4 @@
-#reverse integer
+#reverse integer 51 ms
 
 def reverse(self, x):
         rev=0
@@ -6,7 +6,7 @@ def reverse(self, x):
             a=1
         else: 
             a=-1      
-        num=a*x   
+        num=abs(x)  
         while(num>0):
             rev=rev*10+num%10
             num=num/10
