@@ -1,19 +1,16 @@
-class Solution(object): #69ms string to integer
-    import re
+    import re #59 ms
     def myAtoi(self, str):
-        if len(str)==0:
-            return 0
-        # str.strip()
-        str=str.strip().rsplit()[0]
-        str=re.compile("[a-z]").split(str)[0]
-        try:
-            a=int(str)
-            if(-2**31< a <2**31-1):
-               return a    
-            if (a >= 2**31-1):
-               return 2**31-1
-            elif a <= -2**31:
-               return -2**31
-        except ValueError:
+        if len(str) !=0:
+            str=str.strip().split()[0]
+            str=re.compile("[a-z]").split(str)[0]
+            try:
+                a=int(str)
+                if(-2**31< a <2**31-1):
+                    return a    
+                if (a >= 2**31-1):
+                    return 2**31-1
+                elif a <= -2**31:
+                    return -2**31
+            except ValueError:
                 pass
         return 0
