@@ -1,0 +1,3 @@
+def isPalindrome(self, x): #240ms 
+        a=str(x)
+        return bool (a==a[::-1])
